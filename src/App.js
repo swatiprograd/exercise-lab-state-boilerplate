@@ -6,11 +6,19 @@ import Data from "./components/Data";
 // you can even create a component with a class.
 
 export default class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      date:new Date()
+    }
+  }
+
   render() {
     return (
       <div>
     <header>
       <img src="https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/Kalvium-Logo.png" alt=""></img>
+      <h3>{this.state.date.toLocaleTimeString()}</h3>
       <h3>Kalvium Education</h3>
     </header>
     <div>
